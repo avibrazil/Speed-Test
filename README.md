@@ -1,3 +1,9 @@
+This is a fork optimized for RPM-packaging. For example, there is no reason to keep a 30MB file with random data under version control, in the tarball, source package and final package.
+This file can be created by a simple `truncate` (best) or `fallocate` (worse) or `dd` (worst) command during package installation time.
+
+We are going to use `truncate -l 30M downloading` during installation because the 30MB won't even use storage space in the target server.
+<hr>
+
 #  **[SpeedTest by OpenSpeedTest™](https://openspeedtest.com?Run&ref=Github)** - Free & Open-Source HTML5 Network Performance Estimation Tool.
 
   
