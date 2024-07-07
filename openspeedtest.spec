@@ -4,7 +4,7 @@ Version: 1.5
 Release: 1
 License: MIT
 Group: Networking
-Source: %{name}.tar.gz
+Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/build-root-%{name}
 BuildArch: noarch
 Requires: httpd
@@ -17,7 +17,7 @@ files, point your browser to http://YOUR-IP/speedtest and check your private
 network speed between 2 points of your control.
 
 %prep
-%setup -q -n %{name}
+%setup -n %{name}
 
 %build
 

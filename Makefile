@@ -7,9 +7,9 @@ changelog:
 
 tgz:
 	cd ..; \
-    tar --exclude-vcs --exclude=.ipynb_checkpoints -czvf openspeedtest.tar.gz openspeedtest; \
-    mv openspeedtest.tar.gz ${HOME}/rpmbuild/SOURCES/
+	tar --exclude-vcs --exclude=.ipynb_checkpoints -czvf openspeedtest-1.5.tar.gz openspeedtest
 
 rpm: tgz
 	# RPM will be generated in ~/rpmbuild/RPMS/noarch
+	mv ../openspeedtest-1.5.tar.gz ${HOME}/rpmbuild/SOURCES/; \
 	rpmbuild -ba --build-in-place openspeedtest.spec
